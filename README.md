@@ -3,11 +3,11 @@ dotenv (quasar-app-extension-dotenv)
 
 This project is an official Quasar App Extension for [dotenv](https://www.npmjs.com/package/dotenv).
 
-See tutorials
+For creating your own Quasar App Extension see tutorials:
 1. Part 1: [here]() <- pending
 2. Part 2: [here]() <- pending
 
-To add this App Extension to your Quasar application, run the following (in your apps folder):
+To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
 
 ```
 quasar ext --add @quasar/dotenv
@@ -22,7 +22,9 @@ You will be asked a few questions:
 ```
 Selecting `[enter]` on your keyboard will give you the defaults. The env file will be `.env` and there will be no common root object.
 
-Any data in a `.env` will be placed in `process.env` at the browser level. If you specified a common root object, say `MyData`, then the data will be at `process.env.MyData`.
+Any data in a `.env` will be placed in `process.env` at the browser level. 
+
+If you specified a common root object, say `MyData`, then the data will be placed at `process.env.MyData`.
 
 To uninstall:
 ```
