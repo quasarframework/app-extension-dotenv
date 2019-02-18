@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-dotenv",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.2",
   "description": "Load .env variables into quasar your project",
   "author": "Hawkeye64 <jeff@quasar-framework.org>",
   "scripts": {
@@ -9,16 +9,15 @@
   "publishConfig": {
     "access": "public"
   },
+  "keywords":["quasar", "app", "app extension", "extension", "dotenv"],
   "engines": {
     "node": ">= 8.9.0",
     "npm": ">= 5.6.0",
     "yarn": ">= 1.6.0"
   },
-  "devDependencies": {
-    "chalk": "^2.4.2",
+  "dependencies": {
     "dotenv": "^6.2.0",
     "fs": "^0.0.1-security",
-    "ms": "^2.1.1",
     "path": "^0.12.7"
   }
 }

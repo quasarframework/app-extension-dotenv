@@ -8,7 +8,7 @@ const
   fs = require('fs'),
   path = require('path')
 
-const extendQuasarConf = function (api, conf) {
+const extendWithDotenv = function (api, conf) {
   let envName = '.env' // default name
 
   // get .env name based on dev or production
@@ -29,8 +29,8 @@ const extendQuasarConf = function (api, conf) {
 
   // check file exists
   if (!fs.existsSync(envPath)) {
-    console.error(`App Extension (dotenv): Missing '${envPath}'`)
-    process.exit(1)
+    console.error(`App Extension (dotenv): '${envName}' file missing; skipping`)
+    return
   }
 
   // dotenv options
@@ -76,6 +76,6 @@ const extendQuasarConf = function (api, conf) {
 
 module.exports = function (api, ctx) {
   api.extendQuasarConf((conf) => {
-    extendQuasarConf(api, conf)
+    extendWithDotenv(api, conf)
   })
 }
