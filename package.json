@@ -9,10 +9,13 @@
   "publishConfig": {
     "access": "public"
   },
+  "bugs": "https://github.com/quasarframework/app-extension-dotenv/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quasarframework/app-extension-dotenv"
+    "url": "git+https://github.com/quasarframework/app-extension-dotenv.git"
   },
+  "homepage": "https://github.com/quasarframework/app-extension-dotenv",
+  "license": "MIT",
   "keywords":["quasar", "app", "app extension", "extension", "dotenv"],
   "engines": {
     "node": ">= 8.9.0",
