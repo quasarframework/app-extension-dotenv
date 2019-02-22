@@ -30,7 +30,7 @@ Be aware, if you have something like this in your `.env`:
 
 `APP_PORT=4000`
 
-Then yu will need to use `parseInt()` function as it will be propogated to the browser code as a string.
+Then you will need to use `parseInt()` function as it will be propogated to the browser code as a string.
 
 To uninstall:
 ```
