@@ -40,19 +40,19 @@ module.exports = function () {
     {
       type: 'input',
       name: 'env_development',
-      message: "Name of .env for development:",
+      message: "What is the name of your .env that you will be using for development builds?",
       default: ".env"
     },
     {
       type: 'input',
       name: 'env_production',
-      message: "Name of .env for production:",
+      message: "What is the name of your .env that you will be using for production builds?",
       default: ".env"
     },
     {
       type: 'input',
       name: 'common_root_object',
-      message: "Name of your Common Root Object:",
+      message: "What name would you like to use for your Common Root Object ('none' means to not use one)?",
       default: "none"
     }
   ]

@@ -1,11 +1,12 @@
 {
   "name": "@quasar/quasar-app-extension-dotenv",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Load .env variables into your quasar project",
   "author": "Hawkeye64 <jeff@quasar-framework.org>",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
   },
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },
