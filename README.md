@@ -14,7 +14,7 @@ For creating your own Quasar App Extension see tutorials:
 To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
 
 ```
-quasar ext --add @quasar/dotenv
+quasar ext add @quasar/dotenv
 ```
 Which will retrieve it from NPM and install it.
 
