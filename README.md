@@ -40,3 +40,6 @@ To uninstall:
 ```
 quasar ext --remove @quasar/dotenv
 ```
+
+# Patreon
+If you like (and use) this App Extension, please consider becoming a Quasar [Patreon](https://www.patreon.com/quasarframework).
