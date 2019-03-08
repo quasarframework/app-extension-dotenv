@@ -5,7 +5,7 @@ This project is an official Quasar v1 App Extension for [dotenv](https://www.npm
 
 > WARNING
 >
-> This app extension has been updated to work with changes that will be released with `@quasar/app - 1.0.0-beta.9`. If you have not upgraded to `1.0.0-beta.9` this app extension will not work.
+> This app extension has been updated to work with changes that were released with `@quasar/app - 1.0.0-beta.9`. If you have not upgraded to `1.0.0-beta.9` this app extension will not work.
 
 For creating your own Quasar App Extension see tutorials:
 1. Part 1: [here](https://medium.com/p/4a87561336ef)
@@ -38,7 +38,7 @@ Then you will need to use `parseInt()` function as it will be propogated to the 
 
 To uninstall:
 ```
-quasar ext --remove @quasar/dotenv
+quasar ext remove @quasar/dotenv
 ```
 
 # Patreon
