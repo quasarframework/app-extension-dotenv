@@ -1,13 +1,15 @@
 dotenv (quasar-app-extension-dotenv)
 ===
 
+![official icon](https://img.shields.io/badge/Quasar%201.0-Official%20CLI%20App%20Extension-blue.svg)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/app-extension-dotenv.svg)]()
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/app-extension-dotenv.svg)]()
+[![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-dotenv)
+
+
 This project is an official Quasar v1 App Extension for [dotenv](https://www.npmjs.com/package/dotenv).
 
-> WARNING
->
-> This app extension has been updated to work with changes that were released with `@quasar/app - 1.0.0-beta.9`. If you have not upgraded to `1.0.0-beta.9` this app extension will not work.
-
-For creating your own Quasar App Extension see tutorials:
+For creating your own Quasar App CLI Extension see tutorials:
 1. Part 1: [here](https://medium.com/p/4a87561336ef)
 2. Part 2: [here](https://medium.com/p/dac4740c1daa)
 
