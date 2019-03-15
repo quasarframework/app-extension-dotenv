@@ -1,15 +1,20 @@
 dotenv (quasar-app-extension-dotenv)
 ===
 
-![official icon](https://img.shields.io/badge/Quasar%201.0-Official%20CLI%20App%20Extension-blue.svg)
+![official icon](https://img.shields.io/badge/Quasar%201.0-Official%20CLI%20App%20Extension-green.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?style=plastic)
+
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/app-extension-dotenv.svg)]()
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/app-extension-dotenv.svg)]()
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-dotenv)
 
+This project is an official Quasar v1 CLI App Extension for [dotenv](https://www.npmjs.com/package/dotenv).
 
-This project is an official Quasar v1 App Extension for [dotenv](https://www.npmjs.com/package/dotenv).
+quasar-app-extension-dotenv is a `CLI App Extension` for [Quasar Framework v1](https://v1.quasar-framework.org/). It will not work with legacy versions of Quasar Framework.
 
-For creating your own Quasar App CLI Extension see tutorials:
+This work is currently in `beta` and there are expected changes while things get worked out. Your help with testing is greatly appreciated.
+
+For creating your own Quasar App CLI Extension see tutorials (currently out of date and may not be reliable):
 1. Part 1: [here](https://medium.com/p/4a87561336ef)
 2. Part 2: [here](https://medium.com/p/dac4740c1daa)
 
@@ -36,7 +41,7 @@ Be aware, if you have something like this in your `.env`:
 
 `APP_PORT=4000`
 
-Then you will need to use `parseInt()` function as it will be propogated to the browser code as a string.
+Then you will need to use the `parseInt()` function as it will be propogated to the browser code as a string.
 
 To uninstall:
 ```
