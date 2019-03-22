@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-dotenv",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.5",
   "description": "Load .env variables into your quasar project",
   "author": "Hawkeye64 <jeff@quasar-framework.org>",
   "scripts": {
