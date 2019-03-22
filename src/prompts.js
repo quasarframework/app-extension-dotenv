@@ -54,6 +54,18 @@ module.exports = function () {
       name: 'common_root_object',
       message: "What name would you like to use for your Common Root Object ('none' means to not use one)?",
       default: "none"
+    },
+    {
+      type: 'confirm',
+      name: 'create_env_files',
+      message: "Create your .env files for you?",
+      default: "Y"
+    },
+    {
+      type: 'confirm',
+      name: 'add_env_to_gitignore',
+      message: "For security, would you like your .env files automatically added to .gitignore?",
+      default: "Y"
     }
   ]
 }

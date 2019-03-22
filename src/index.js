@@ -24,6 +24,11 @@ const extendWithDotenv = function (api, conf) {
     }
   }
 
+  // see if there is anything to do
+  if (envName === void 0 || envName === '') {
+    return
+  }
+
   // resolve the path to the file
   let envPath = path.resolve(process.cwd(), envName)
 
@@ -75,6 +80,7 @@ const extendWithDotenv = function (api, conf) {
 }
 
 module.exports = function (api, ctx) {
+  console.log('dotenv extension called')
   api.extendQuasarConf((conf) => {
     extendWithDotenv(api, conf)
   })
