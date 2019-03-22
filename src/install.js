@@ -15,7 +15,7 @@ module.exports = function (api) {
     envFiles.forEach((envName) => {
       const envPath = api.resolve.app(envName)
       if (fs.existsSync(envPath)) {
-        console.log(`App Extension (dotenv): '${envName}' already exists; No need to create it.`)
+        console.error(`App Extension (dotenv): '${envName}' already exists; No need to create it.`)
         return
       }
       let fd
@@ -24,7 +24,7 @@ module.exports = function (api) {
         fd = fs.openSync(envPath, 'w')
       }
       catch(err) {
-        console.log(`App Extension (dotenv): '${envName}' error code (${err.code}).`)
+        console.error(`App Extension (dotenv): '${envName}' error code (${err.code}).`)
         return;
       }
       fs.writeSync(fd, '# This is your .env file\r\n# The data added here will be propagated to the client\r\n# example:\r\n# PORT=8080\r\n')
@@ -53,6 +53,4 @@ module.exports = function (api) {
     // write .gitignore
     fs.writeFileSync(gitignorePath, buffer, 'utf8')
   }
-
-  api.render('./staging', {}, true)
 }
