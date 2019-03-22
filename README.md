@@ -25,13 +25,19 @@ quasar ext add @quasar/dotenv
 ```
 Which will retrieve it from NPM and install it.
 
-You will be asked a few questions:
+You will be asked a few questions. Type in your answers:
 ```
-? What is the name of your .env that you will be using for development builds? .env
-? What is the name of your .env that you will be using for production builds? .env
+? What is the name of your .env that you will be using for development builds? .env.dev
+? What is the name of your .env that you will be using for production builds? .env.prod
 ? What name would you like to use for your Common Root Object ('none' means to not use one)? none
+? Create your .env files for you? Yes
+? For security, would you like your .env files automatically added to .gitignore? Yes
 ```
 Selecting `[enter]` on your keyboard will give you the defaults. The env file will be `.env` and there will be no common root object.
+
+If you do not want your .env files created for you, say no. However, if the specified .env file already exists, it will NOT be overwritten. Note that if the files do not exist, then the build will fail.
+
+Also, it is highly recommended to add your .env files to your .gitignore. They really do not belong in your repository as they may hold sensitive data.
 
 Any data in a `.env` will be placed in `process.env` at the browser level. 
 
