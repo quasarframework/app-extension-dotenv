@@ -4,18 +4,16 @@
  * API: https://github.com/quasarframework/quasar/blob/master/app/lib/app-extension/InstallAPI.js
  *
  */
-const
-  fs = require('fs'),
-  path = require('path')
+const fs = require('fs')
 
 module.exports = function (api) {
   // create array of env files
-  let envFiles = [api.prompts.env_development, api.prompts.env_production]
+  const envFiles = [api.prompts.env_development, api.prompts.env_production]
 
   // does user want .env files created?
   if (api.prompts.create_env_files === true) {
     envFiles.forEach((envName) => {
-      let envPath = path.resolve(process.cwd(), envName)
+      const envPath = api.resolve.app(envName)
       if (fs.existsSync(envPath)) {
         console.error(`App Extension (dotenv): '${envName}' already exists; No need to create it.`)
         return
@@ -29,14 +27,14 @@ module.exports = function (api) {
         console.error(`App Extension (dotenv): '${envName}' error code (${err.code}).`)
         return;
       }
-      fs.writeSync(fd, '# This is your .env file\r\n# The data added here will be propogated to the client\r\n# example:\r\n# PORT=8080\r\n')
+      fs.writeSync(fd, '# This is your .env file\r\n# The data added here will be propagated to the client\r\n# example:\r\n# PORT=8080\r\n')
       fs.closeSync(fd)
     })
   }
 
   // does user want .env added to .gitignore?
   if (api.prompts.add_env_to_gitignore === true) {
-    let gitignorePath = path.resolve(process.cwd(), '.gitignore')
+    const gitignorePath = api.resolve.app('.gitignore')
     // read .gitignore
     let buffer = fs.readFileSync(gitignorePath, 'utf8')
     // convert to array

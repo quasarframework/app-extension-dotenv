@@ -4,9 +4,7 @@
  *
  * API: https://github.com/quasarframework/quasar/blob/master/app/lib/app-extension/IndexAPI.js
  */
-const
-  fs = require('fs'),
-  path = require('path')
+const fs = require('fs')
 
 const extendWithDotenv = function (api, conf) {
   let envName = '.env' // default name
@@ -30,7 +28,7 @@ const extendWithDotenv = function (api, conf) {
   }
 
   // resolve the path to the file
-  let envPath = path.resolve(process.cwd(), envName)
+  const envPath = api.resolve.app(envName)
 
   // check file exists
   if (!fs.existsSync(envPath)) {
