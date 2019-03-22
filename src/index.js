@@ -80,7 +80,6 @@ const extendWithDotenv = function (api, conf) {
 }
 
 module.exports = function (api, ctx) {
-  console.log('dotenv extension called')
   api.extendQuasarConf((conf) => {
     extendWithDotenv(api, conf)
   })
