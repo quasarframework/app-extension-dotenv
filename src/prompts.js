@@ -59,13 +59,13 @@ module.exports = function () {
       type: 'confirm',
       name: 'create_env_files',
       message: "Create your .env files for you?",
-      default: "Y"
+      default: true
     },
     {
       type: 'confirm',
       name: 'add_env_to_gitignore',
       message: "For security, would you like your .env files automatically added to .gitignore?",
-      default: "Y"
+      default: true
     }
   ]
 }

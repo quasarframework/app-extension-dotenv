@@ -54,11 +54,6 @@ const extendWithDotenv = function (api, conf) {
   // get parsed data
   const parsed = result.parsed
 
-  // make sure there is a build.env object
-  if (!conf.build.env) {
-    conf.build.env = {}
-  }
-
   // for brevity
   let target = conf.build.env
 
