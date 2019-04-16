@@ -72,7 +72,7 @@ const extendWithDotenv = function (api, conf) {
   }
 }
 
-module.exports = function (api, ctx) {
+module.exports = function (api) {
   api.extendQuasarConf((conf) => {
     extendWithDotenv(api, conf)
   })
