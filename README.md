@@ -14,10 +14,13 @@ quasar-app-extension-dotenv is a `CLI App Extension` for [Quasar Framework v1](h
 
 This work is currently in `beta` and there are expected changes while things get worked out. Your help with testing is greatly appreciated.
 
-For creating your own Quasar App CLI Extension see tutorials (currently out of date and may not be reliable):
-1. Part 1: [here](https://medium.com/p/4a87561336ef)
-2. Part 2: [here](https://medium.com/p/dac4740c1daa)
+# Test Project
+In **demo** folder of **app-extension-dotenv**.
 
+# Demo
+Can be found [here](https://quasarframework.github.io/app-extension-dotenv/demo/dist/spa/#/).
+
+# Install
 To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
 
 ```
@@ -49,7 +52,7 @@ Be aware, if you have something like this in your `.env`:
 
 Then you will need to use the `parseInt()` function as it will be propogated to the browser code as a string.
 
-To uninstall:
+# Uninstall
 ```
 quasar ext remove @quasar/dotenv
 ```

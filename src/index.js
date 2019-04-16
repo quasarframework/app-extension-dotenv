@@ -32,7 +32,7 @@ const extendWithDotenv = function (api, conf) {
 
   // check file exists
   if (!fs.existsSync(envPath)) {
-    console.error(`App Extension (dotenv): '${envName}' file missing; skipping`)
+    console.log(`App Extension (dotenv): '${envName}' file missing; skipping`)
     return
   }
 
@@ -54,11 +54,6 @@ const extendWithDotenv = function (api, conf) {
   // get parsed data
   const parsed = result.parsed
 
-  // make sure there is a build.env object
-  if (!conf.build.env) {
-    conf.build.env = {}
-  }
-
   // for brevity
   let target = conf.build.env
 
@@ -77,7 +72,7 @@ const extendWithDotenv = function (api, conf) {
   }
 }
 
-module.exports = function (api, ctx) {
+module.exports = function (api) {
   api.extendQuasarConf((conf) => {
     extendWithDotenv(api, conf)
   })
