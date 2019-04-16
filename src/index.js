@@ -32,7 +32,7 @@ const extendWithDotenv = function (api, conf) {
 
   // check file exists
   if (!fs.existsSync(envPath)) {
-    console.error(`App Extension (dotenv): '${envName}' file missing; skipping`)
+    console.log(`App Extension (dotenv): '${envName}' file missing; skipping`)
     return
   }
 
