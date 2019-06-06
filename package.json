@@ -4,6 +4,9 @@
   "description": "Load .env variables into your quasar project",
   "author": "Hawkeye64 <jeff@quasar-framework.org>",
   "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "lint-fix": "eslint --ext .js,.vue src --fix",
+    "build-demo": "cd ./demo && yarn build && cd .. && cp ./_redirects ./demo/dist/spa && rm -r -f ./docs && cp -r ./demo/dist/spa/. ./docs",
     "test": "echo \"No test specified\" && exit 0"
   },
   "main": "src/index.js",
