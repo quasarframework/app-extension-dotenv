@@ -18,7 +18,7 @@ This work is currently in `beta` and there are expected changes while things get
 In **demo** folder of **app-extension-dotenv**.
 
 # Demo
-Can be found [here](https://quasarframework.github.io/app-extension-dotenv/demo/dist/spa/#/).
+Can be found [here](https://quasarframework.github.io/app-extension-dotenv/).
 
 # Install
 To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
@@ -42,7 +42,7 @@ If you do not want your .env files created for you, say no. However, if the spec
 
 Also, it is highly recommended to add your .env files to your .gitignore. They really do not belong in your repository as they may hold sensitive data.
 
-Any data in a `.env` will be placed in `process.env` at the browser level. 
+Any data in a `.env` will be placed in `process.env` at the browser level.
 
 If you specified a common root object, say `MyData`, then the data will be placed at `process.env.MyData`.
 
