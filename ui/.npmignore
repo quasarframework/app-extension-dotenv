@@ -1,7 +1,9 @@
+/build
+/dev
+umd-test.html
+
 .DS_Store
 .thumbs.db
-node_modules
-dist
 yarn.lock
 npm-debug.log*
 yarn-debug.log*
@@ -14,3 +16,6 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+.editorconfig
+.eslintignore
+.eslintrc.js
