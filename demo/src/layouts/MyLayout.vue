@@ -95,6 +95,7 @@ export default {
     openURL
   },
   mounted () {
+    /* eslint-disable no-console */
     console.log('Dotenv Test', process.env)
   }
 }
