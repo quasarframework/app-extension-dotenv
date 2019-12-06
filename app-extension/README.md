@@ -10,7 +10,7 @@ quasar-app-extension-dotenv is a `CLI App Extension` for [Quasar Framework](http
 
 # Install
 ```bash
-quasar ext add dotenv
+quasar ext add @quasar/dotenv
 ```
 Quasar CLI will retrieve it from NPM and install the extension.
 
@@ -44,7 +44,7 @@ Then you will need to use the `parseInt()` function as it will be propogated to 
 
 # Uninstall
 ```bash
-quasar ext remove dotenv
+quasar ext remove @quasar/dotenv
 ```
 
 # Donate
