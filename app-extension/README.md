@@ -40,7 +40,7 @@ Be aware, if you have something like this in your `.env`:
 
 `APP_PORT=4000`
 
-Then you will need to use the `parseInt()` function as it will be propogated to the browser code as a string.
+Then you will need to use the `parseInt()` function as it will be propagated to the browser code as a string.
 
 # Uninstall
 ```bash
