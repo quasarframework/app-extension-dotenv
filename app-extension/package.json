@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-dotenv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load .env variables into your quasar project",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
@@ -32,7 +32,8 @@
     "app",
     "app extension",
     "extension",
-    "dotenv"
+    "dotenv",
+    "env"
   ],
   "engines": {
     "node": ">= 8.9.0",
