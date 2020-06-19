@@ -96,7 +96,7 @@ export default {
   },
   mounted () {
     /* eslint-disable no-console */
-    console.log('Dotenv Test', process.env)
+    console.log(`Dotenv Test: (TEST: ${process.env.TEST})`)
   }
 }
 </script>

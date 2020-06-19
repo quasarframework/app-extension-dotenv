@@ -7,6 +7,7 @@
  */
 
 const fs = require('fs')
+const semver = require('semver')
 
 const extendConf = function (api, conf) {
   let envName = '.env' // default name
@@ -53,6 +54,9 @@ const extendConf = function (api, conf) {
     process.exit(1)
   }
 
+  const version = api.getPackageVersion('@quasar/app')
+  const v1 = semver.lt(version, '2.0.0')
+
   // get parsed data
   const parsed = result.parsed
 
@@ -70,7 +74,7 @@ const extendConf = function (api, conf) {
   }
 
   for (const key in parsed) {
-    target[key] = JSON.stringify(parsed[key])
+    target[key] = v1 === true ? JSON.stringify(parsed[key]) : parsed[key]
   }
 }
 
@@ -78,9 +82,8 @@ module.exports = function (api) {
   // Quasar compatibility check; you may need
   // hard dependencies, as in a minimum version of the "quasar"
   // package or a minimum version of "@quasar/app" CLI
-  api.compatibleWith('quasar', '^1.1.1')
-  api.compatibleWith('@quasar/app', '^1.1.0')
-
+  // api.compatibleWith('quasar', '^1.1.1')
+  api.compatibleWith('@quasar/app', '^1.1.0 || ^2.0.0')
 
   // We extend /quasar.conf.js
   api.extendQuasarConf((conf) => {
