@@ -41,6 +41,7 @@
     "yarn": ">= 1.6.0"
   },
   "devDependencies": {
-    "semver": "^7.3.2"
+    "semver": "^7.3.2",
+    "dotenv-parse-variables": "^0.3.0"
   }
 }
