@@ -8,6 +8,8 @@
 
 const fs = require('fs')
 const semver = require('semver')
+// https://github.com/niftylettuce/dotenv-parse-variables
+const dotenvParseVariables = require('dotenv-parse-variables')
 
 const extendConf = function (api, conf) {
   let envName = '.env' // default name
@@ -58,7 +60,7 @@ const extendConf = function (api, conf) {
   const v1 = semver.lt(version, '2.0.0')
 
   // get parsed data
-  const parsed = result.parsed
+  const parsed = dotenvParseVariables(result.parsed)
 
   // for brevity
   let target = conf.build.env
