@@ -13,7 +13,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Quasar App
+          App Extension Dotenv <span class="text-subtitle2">v{{ version }}</span>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -83,11 +83,13 @@
 
 <script>
 import { openURL } from 'quasar'
+import { version } from '@quasar/quasar-app-extension-dotenv/package.json'
 
 export default {
   name: 'MyLayout',
   data () {
     return {
+      version: version,
       leftDrawerOpen: this.$q.platform.is.desktop
     }
   },
