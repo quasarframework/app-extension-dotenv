@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-dotenv",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Load .env variables into your quasar project",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "fs": "^0.0.2"
+    "fs": "^0.0.2",
+    "dotenv-parse-variables": "^0.3.0"
   },
   "main": "src/index.js",
   "funding": {
@@ -41,7 +42,6 @@
     "yarn": ">= 1.6.0"
   },
   "devDependencies": {
-    "semver": "^7.3.2",
-    "dotenv-parse-variables": "^0.3.0"
+    "semver": "^7.3.2"
   }
 }
