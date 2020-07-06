@@ -1,12 +1,9 @@
 # Quasar App Extension dotenv
 
-This project is an official Quasar CLI App Extension for [dotenv](https://www.npmjs.com/package/dotenv).
+@quasar/quasar-app-extension-dotenv is an official `Quasar CLI App Extension` for the popular [dotenv](https://www.npmjs.com/package/dotenv) package.
 
-quasar-app-extension-dotenv is a `CLI App Extension` for [Quasar Framework](https://quasar.dev/).
-
-<img src="https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?label=@quasar/quasar-app-extension-dotenv">
-<img src="https://img.shields.io/github/repo-size/quasarframework/app-extension-dotenv.svg">
-<img src="https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg">
+![@quasar/quasar-app-extension-dotenv](https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?label=@quasar/quasar-app-extension-dotenv)
+[![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-dotenv)
 
 # Install
 ```bash
@@ -36,11 +33,13 @@ Any data in a `.env` will be placed in `process.env` at the browser level.
 
 If you specified a common root object, say `MyData`, then the data will be placed at `process.env.MyData`.
 
-Be aware, if you have something like this in your `.env`:
+If you have this:
 
 `APP_PORT=4000`
 
-Then you will need to use the `parseInt()` function as it will be propagated to the browser code as a string.
+Then it will be accessible via `process.env.APP_PORT` or if you have a common root object of `MyData` then it will be `process.env.MyData.APP_PORT`
+
+Note: For security reasons, you cannot `console.log(process.env)`. Quasar does this to enhance your own security.
 
 # Uninstall
 ```bash
