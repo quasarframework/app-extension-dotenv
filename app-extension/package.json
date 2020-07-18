@@ -12,7 +12,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "fs": "^0.0.2",
-    "dotenv-parse-variables": "^0.3.0"
+    "dotenv-parse-variables": "^0.3.1"
   },
   "main": "src/index.js",
   "funding": {
