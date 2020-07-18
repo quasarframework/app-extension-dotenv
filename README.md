@@ -1,6 +1,8 @@
 DOTENV - Quasar Framework app extension
 ===
 
+@quasar/quasar-app-extension-dotenv is an official `Quasar CLI App Extension` for the popular [dotenv](https://www.npmjs.com/package/dotenv) package.
+
 ![@quasar/quasar-app-extension-dotenv](https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?label=@quasar/quasar-app-extension-dotenv)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/app-extension-dotenv.svg)]()
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/app-extension-dotenv.svg)]()

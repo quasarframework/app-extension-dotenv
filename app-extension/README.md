@@ -5,6 +5,8 @@
 ![@quasar/quasar-app-extension-dotenv](https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?label=@quasar/quasar-app-extension-dotenv)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-dotenv)
 
+> For a less-opinionated app extension, you can look into using [quasar-app-extension-qenv](https://github.com/quasarframework/app-extension-qenv) instead.
+
 # Install
 ```bash
 quasar ext add @quasar/dotenv
