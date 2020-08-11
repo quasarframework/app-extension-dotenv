@@ -8,7 +8,7 @@ const fs = require('fs')
 
 module.exports = function (api) {
   // create array of env files
-  const envFiles = [api.prompts.env_development, api.prompts.env_production]
+  const envFiles = [api.prompts.env_development, api.prompts.env_production, api.prompts.env_staging]
 
   // does user want .env files created?
   if (api.prompts.create_env_files === true) {
@@ -23,7 +23,7 @@ module.exports = function (api) {
         // create files that don't already exist
         fd = fs.openSync(envPath, 'w')
       }
-      catch(err) {
+      catch (err) {
         console.error(`App Extension (dotenv): '${envName}' error code (${err.code}).`)
         return;
       }
