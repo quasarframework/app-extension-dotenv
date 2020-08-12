@@ -51,12 +51,6 @@ module.exports = function () {
     },
     {
       type: 'input',
-      name: 'env_staging',
-      message: "What is the name of your .env that you will be using for staging builds?",
-      default: ".env"
-    },
-    {
-      type: 'input',
       name: 'common_root_object',
       message: "What name would you like to use for your Common Root Object ('none' means to not use one)?",
       default: "none"

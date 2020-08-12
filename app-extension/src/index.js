@@ -25,9 +25,6 @@ const extendConf = function (api, conf) {
     if (api.prompts.env_production) {
       envName = api.prompts.env_production
     }
-    else if (api.prompts.env_staging) {
-      envName = api.prompts.env_staging
-    }
   }
 
   // see if there is anything to do
