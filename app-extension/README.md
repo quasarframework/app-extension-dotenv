@@ -7,7 +7,7 @@
 
 > The Dotenv App Extension works only for development and production builds. If you need something less-opinionated, go to the [@quasar/quasar-app-extension-qenv](https://github.com/quasarframework/app-extension-qenv) app extension.
 
-> Need some training using `app-extension-dotenv`? You can [watch this video](https://quasarcast.com/extensions/dotenv) by Ian Diebold. Impressed by this video? You can also find him on [twitter](https://twitter.com/LukeDiebold) and [github](https://github.com/ldiebold).
+> Need some training using `app-extension-dotenv`? You can [watch this video](https://quasarcast.com/extensions/dotenv) by Luke Diebold. Impressed by this video? You can also find him on [twitter](https://twitter.com/LukeDiebold) and [github](https://github.com/ldiebold).
 
 # Install
 ```bash
