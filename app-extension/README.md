@@ -5,7 +5,9 @@
 ![@quasar/quasar-app-extension-dotenv](https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?label=@quasar/quasar-app-extension-dotenv)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-dotenv)
 
-> For a less-opinionated app extension, you can look into using [quasar-app-extension-qenv](https://github.com/quasarframework/app-extension-qenv) instead.
+> The Dotenv App Extension works only for development and production builds. If you need something less-opinionated, go to the [@quasar/quasar-app-extension-qenv](https://github.com/quasarframework/app-extension-qenv) app extension.
+
+> Need some training using `app-extension-dotenv`? You can [watch this video](https://quasarcast.com/extensions/dotenv) by Ian Diebold. Impressed by this video? You can also find him on [twitter](https://twitter.com/LukeDiebold) and [github](https://github.com/ldiebold).
 
 # Install
 ```bash
