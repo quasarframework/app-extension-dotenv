@@ -75,6 +75,7 @@ const extendConf = function (api, conf) {
     }
   }
 
+  // previous tp @quasar/app v2.0.0 the data had to be stringified
   for (const key in parsed) {
     target[key] = v1 === true ? JSON.stringify(parsed[key]) : parsed[key]
   }
