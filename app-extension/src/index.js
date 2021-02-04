@@ -75,6 +75,7 @@ const extendConf = function (api, conf) {
     }
   }
 
+  // previous tp @quasar/app v2.0.0 the data had to be stringified
   for (const key in parsed) {
     target[key] = v1 === true ? JSON.stringify(parsed[key]) : parsed[key]
   }
@@ -85,7 +86,7 @@ module.exports = function (api) {
   // hard dependencies, as in a minimum version of the "quasar"
   // package or a minimum version of "@quasar/app" CLI
   // api.compatibleWith('quasar', '^1.1.1')
-  api.compatibleWith('@quasar/app', '^1.1.0 || ^2.0.0')
+  api.compatibleWith('@quasar/app', '^1.1.0 || ^2.0.0 || ^3.0.0-beta.1')
 
   // We extend /quasar.conf.js
   api.extendQuasarConf((conf) => {

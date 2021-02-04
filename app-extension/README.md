@@ -5,7 +5,11 @@
 ![@quasar/quasar-app-extension-dotenv](https://img.shields.io/npm/v/@quasar/quasar-app-extension-dotenv.svg?label=@quasar/quasar-app-extension-dotenv)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-dotenv.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-dotenv)
 
-> For a less-opinionated app extension, you can look into using [quasar-app-extension-qenv](https://github.com/quasarframework/app-extension-qenv) instead.
+**Now compatible with Quasar v2 beta**
+
+> The Dotenv App Extension works only for development and production builds. If you need something less-opinionated, go to the [@quasar/quasar-app-extension-qenv](https://github.com/quasarframework/app-extension-qenv) app extension.
+
+> Need some training using `app-extension-dotenv`? You can [watch this video](https://quasarcast.com/extensions/dotenv) by Luke Diebold. Impressed by this video? You can also find him on [twitter](https://twitter.com/LukeDiebold) and [github](https://github.com/ldiebold).
 
 # Install
 ```bash
@@ -15,31 +19,29 @@ Quasar CLI will retrieve it from NPM and install the extension.
 
 ## Prompts
 
-1. "What is the name of your .env that you will be using for development builds?"
-  The default is ".env"
+`"What is the name of your .env that you will be using for development builds?"` 
 
-2. "What name would you like to use for your Common Root Object ('none' means to not use one)?"
-  The default is "none"
-  The "common root object" means off of "process.env" you will have a named object, basically for organization purposes.
+The default is ".env"
 
-3. "Create your .env files for you?"
-  The default is "true" (yes)
-  If you say "yes" to this question, then your .env files will be automatically created for you.
+`"What name would you like to use for your Common Root Object ('none' means to not use one)?"`
 
-4. "For security, would you like your .env files automatically added to .gitignore?"
-  The default is "true" (yes)
-  If you say "yes" to this question, then your .env files will automatically be inserted into the .gitignore.
-  For security purposes, because you may have sensitive data in your .env file, you should not keep it in a repository.
+The default is "none". If a value is set, this value will be appended to `process.env`.
 
-Any data in a `.env` will be placed in `process.env` at the browser level.
+E.g. If a value is set in .env (e.g. `PORT`). Without a Common Root Object it will be accessible through `process.env.PORT`. If a Common Root Object is set (e.g. `MyCompany`), then it will be accessible through `process.env.MyCompany.PORT`.
 
-If you specified a common root object, say `MyData`, then the data will be placed at `process.env.MyData`.
+`"Create your .env files for you?"`
 
-If you have this:
+The default is "true" (yes)
 
-`APP_PORT=4000`
+If you say "yes" to this question, then your .env files will be automatically created for you.
 
-Then it will be accessible via `process.env.APP_PORT` or if you have a common root object of `MyData` then it will be `process.env.MyData.APP_PORT`
+`"For security, would you like your .env files automatically added to .gitignore?"`
+
+The default is "true" (yes)
+
+If you say "yes" to this question, then your .env files will automatically be inserted into the .gitignore.
+
+For security purposes, because you may have sensitive data in your .env file, you should not keep it in a repository.
 
 Note: For security reasons, you cannot `console.log(process.env)`. Quasar does this to enhance your own security.
 
