@@ -12,7 +12,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "fs": "^0.0.2",
-    "dotenv-parse-variables": "^1.0.1"
+    "dotenv-parse-variables": "^2.0.0"
   },
   "devDependencies": {
     "semver": "^7.3.4"
