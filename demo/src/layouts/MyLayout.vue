@@ -98,7 +98,11 @@ export default {
   },
   mounted () {
     /* eslint-disable no-console */
-    console.log(`Dotenv Test: (TEST: ${process.env.TEST})`)
+    const output = {
+      TEST: process.env.TEST,
+      SHELL: process.env.SHELL
+    }
+    console.log('Dotenv Test:', JSON.stringify(output, null, 2))
   }
 }
 </script>

@@ -11,6 +11,8 @@
 
 > Need some training using `app-extension-dotenv`? You can [watch this video](https://quasarcast.com/extensions/dotenv) by Luke Diebold. Impressed by this video? You can also find him on [twitter](https://twitter.com/LukeDiebold) and [github](https://github.com/ldiebold).
 
+> v1.1.0 now supports expanding environmental variables put inside your `.env` file!
+
 # Install
 ```bash
 quasar ext add @quasar/dotenv
@@ -44,6 +46,53 @@ If you say "yes" to this question, then your .env files will automatically be in
 For security purposes, because you may have sensitive data in your .env file, you should not keep it in a repository.
 
 Note: For security reasons, you cannot `console.log(process.env)`. Quasar does this to enhance your own security.
+
+# Accessing the Data
+Any data in your specified `.env` file will be placed in `process.env` at the browser level. DO NOT `console.log(process.env)` as you will not see anything. For security purposes Quasar abstracts this away from prying eyes. If your env variable is `PORT`, then you can `console.log(process.env.PORT)` to see the results.
+
+# Tips
+If you specified a common root object, say `MyData`, then the data will be placed at `process.env.MyData`.
+
+# Format
+The format of a dotenv file is:
+```json
+MY_DOTENV_TEST="This should work!"
+PORT=4000
+SHELL=${SHELL}
+```
+Do NOT put spaces between the equal sign.
+
+# Using Environment Variables
+
+Environment variable are accessed like this: `$MyVar` or `${MyVar}`. If it exists, then it will be expanded.
+
+Here is an example of something that would be used in production:
+
+```bash
+NODE_ENV=test
+BASIC=basic
+BASIC_EXPAND=$BASIC
+MACHINE=machine_env
+MACHINE_EXPAND=$MACHINE
+UNDEFINED_EXPAND=$UNDEFINED_ENV_KEY
+ESCAPED_EXPAND=\$ESCAPED
+MONGOLAB_DATABASE=heroku_db
+MONGOLAB_USER=username
+MONGOLAB_PASSWORD=password
+MONGOLAB_DOMAIN=abcd1234.mongolab.com
+MONGOLAB_PORT=12345
+MONGOLAB_URI=mongodb://${MONGOLAB_USER}:${MONGOLAB_PASSWORD}@${MONGOLAB_DOMAIN}:${MONGOLAB_PORT}/${MONGOLAB_DATABASE}
+
+MONGOLAB_USER_RECURSIVELY=${MONGOLAB_USER}:${MONGOLAB_PASSWORD}
+
+MONGOLAB_URI_RECURSIVELY=mongodb://${MONGOLAB_USER_RECURSIVELY}@${MONGOLAB_DOMAIN}:${MONGOLAB_PORT}/${MONGOLAB_DATABASE}
+
+WITHOUT_CURLY_BRACES_URI=mongodb://$MONGOLAB_USER:$MONGOLAB_PASSWORD@$MONGOLAB_DOMAIN:$MONGOLAB_PORT/$MONGOLAB_DATABASE
+
+WITHOUT_CURLY_BRACES_USER_RECURSIVELY=$MONGOLAB_USER:$MONGOLAB_PASSWORD
+
+WITHOUT_CURLY_BRACES_URI_RECURSIVELY=mongodb://$MONGOLAB_USER_RECURSIVELY@$MONGOLAB_DOMAIN:$MONGOLAB_PORT/$MONGOLAB_DATABASE
+```
 
 # Uninstall
 ```bash
