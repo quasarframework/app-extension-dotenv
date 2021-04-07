@@ -1,3 +1,5 @@
+April 7, 2021: The NPM package for this package has been deprecated and the Github repo archived.
+
 DOTENV - Quasar Framework app extension
 ===
 
